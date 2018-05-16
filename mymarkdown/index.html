@@ -3,9 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>mymarkdown</title>
-  </head>
+  </head>x
   <body>
     <div id="app"></div>
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCRXEpsaEk6bGp1G9wtpbyarx8Y451y0_Q",
+        authDomain: "mymarkdown-fendo181.firebaseapp.com",
+        databaseURL: "https://mymarkdown-fendo181.firebaseio.com",
+        projectId: "mymarkdown-fendo181",
+        storageBucket: "mymarkdown-fendo181.appspot.com",
+        messagingSenderId: "828067748896"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="/dist/build.js"></script>
   </body>
 </html>
