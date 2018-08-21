@@ -18,6 +18,17 @@ export default {
       isLogin: false
     }
   },
+  // Vue.jsでコンポーネントが作成されたタイミングで実行されます
+  created:function() {
+    firebase.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if(user) {
+        this.isLogin = true;
+      } else {
+        this.isLogin = false;
+      };
+    });
+  },
   components: {
     'Home': Home,
     'Editor': Editor,
